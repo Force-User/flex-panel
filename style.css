@@ -1,0 +1,79 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    color: #fff;
+    text-transform: uppercase;
+    font-family: 'Indie Flower', cursive;
+    
+}
+.flex-panels {
+    display: flex;
+    justify-content: space-evenly;
+    height: 100vh;
+}
+
+.panel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex:1;
+    list-style-type: none;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: .5s cubic-bezier(.64,-0.2,.07,.11);
+    box-shadow: inset 0 0 0 5px rgba(0, 0, 0, 0.644);
+    text-shadow: 5px -1px 1px #000;
+    overflow: hidden;
+
+}
+.panel:nth-child(n3) {
+    text-shadow: 5px -1px 1px #fff;
+}
+
+.panel > p {
+    flex:1 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .3s cubic-bezier(.64,-0.2,.07,.11);
+    font-size: 40px;
+}
+.panel > p:first-child {
+    transform: translateY(-100%);
+}
+.panel > p:last-child {
+    transform: translateY(100%);
+}
+.panel.show-text > p {
+    font-size: 80px;
+}
+.panel.show-text > p:first-child {
+    transform: translateY(0);
+}
+.panel.show-text >*:last-child {
+    transform: translateY(0);
+}
+
+.panel:nth-child(1) {
+    background-image: url(image/dance.jpg);
+}
+.panel:nth-child(2) {
+    background-image: url(image/take.jpg);
+}
+.panel:nth-child(3) {
+    background-image: url(image/exp.jpg);
+}
+.panel:nth-child(4) {
+    background-image: url(image/give.jpg);
+}
+.panel:nth-child(5) {
+    background-image: url(image/motion.jpg);
+}
+
+.panel.open {
+    flex:5;
+    
+}
